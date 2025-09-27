@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sinup">
+
+    <TextView
+        android:id="@+id/textLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Sign Up"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="292dp"
+        android:layout_marginTop="60dp"
+        android:hint="Login"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:onClick="goToLoginScreen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageUser"
+        android:layout_width="127dp"
+        android:layout_height="85dp"
+        android:contentDescription="User icon"
+        android:src="@drawable/user"
+        app:layout_constraintTop_toBottomOf="@+id/textLogin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="342dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:hint="User name"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageUser" />
+
+    <EditText
+        android:id="@+id/editTextUserName1"
+        android:layout_width="342dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:hint="Email address"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="333dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUserName1" />
+
+    <ImageView
+        android:id="@+id/eyeIcon"
+        android:layout_width="43dp"
+        android:layout_height="28dp"
+        android:contentDescription="Eye icon"
+        android:src="@drawable/eye"
+        app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+        app:layout_constraintTop_toTopOf="@+id/editTextText2"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText2"
+        android:layout_marginEnd="8dp"/>
+
+    <EditText
+        android:id="@+id/editTextPassword1"
+        android:layout_width="333dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+
+
+    <ImageView
+        android:id="@+id/eyeIcon11"
+        android:layout_width="43dp"
+        android:layout_height="28dp"
+        android:contentDescription="Eye icon"
+        android:src="@drawable/eye"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassword1"
+        app:layout_constraintTop_toTopOf="@+id/editTextPassword1"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPassword1"
+        android:layout_marginEnd="8dp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="292dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:text="SIGN UP"
+        android:textColor="@color/purple_text"
+        android:textSize="20sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword1"
+        app:strokeColor="@color/gray_d9"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SignUp with"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <ImageView
+        android:id="@+id/iconGoogle"
+        android:layout_width="57dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Google icon"
+        android:src="@drawable/devicon_google"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <ImageView
+        android:id="@+id/iconGithub"
+        android:layout_width="46dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="44dp"
+        android:contentDescription="Github icon"
+        android:src="@drawable/akar_icons_github_fill"
+        app:layout_constraintStart_toEndOf="@+id/iconGoogle"
+        app:layout_constraintTop_toTopOf="@+id/iconGoogle" />
+
+    <ImageView
+        android:id="@+id/iconTwitter"
+        android:layout_width="49dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="56dp"
+        android:contentDescription="Twitter icon"
+        android:src="@drawable/twitter"
+        app:layout_constraintStart_toEndOf="@+id/iconGithub"
+        app:layout_constraintTop_toTopOf="@+id/iconGoogle" />
+
+    <ImageView
+        android:id="@+id/iconFacebook"
+        android:layout_width="46dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="44dp"
+        android:contentDescription="Facebook icon"
+        android:src="@drawable/facebooj"
+        app:layout_constraintStart_toEndOf="@+id/iconTwitter"
+        app:layout_constraintTop_toTopOf="@+id/iconGoogle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
