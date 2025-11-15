@@ -12,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
 
     private TabLayout tabLayout;
     private ViewPager2 viewPager;
-    private ViewPagerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +21,15 @@ public class MainActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
 
-        adapter = new ViewPagerAdapter(this);
-        viewPager.setAdapter(adapter);
+        viewPager.setAdapter(new ViewPagerAdapter(this));
 
-        // Gắn TabLayout + ViewPager2
         new TabLayoutMediator(tabLayout, viewPager,
                 (tab, position) -> {
-                    if (position == 0) tab.setText("Tab 1");
-                    else tab.setText("Tab 2");
+                    switch (position) {
+                        case 0: tab.setText("Linear"); break;
+                        case 1: tab.setText("Grid"); break;
+                        case 2: tab.setText("Staggered"); break;
+                    }
                 }).attach();
     }
 }
